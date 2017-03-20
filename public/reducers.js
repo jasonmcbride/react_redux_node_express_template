@@ -3,6 +3,7 @@ const initialState = {
 }
 
 function counterApp(state, action) {
+
     if (typeof state === "undefined")
         return initialState;
 

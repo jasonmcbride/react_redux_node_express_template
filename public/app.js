@@ -2,12 +2,19 @@ import React from 'react'
 import { render } from 'react-dom'
 import Counter from './Counter'
 import { Provider } from 'react-redux'
-import store from './store'
+import ApplicationStore from './store'
+import MainComponent from './MainComponent'
+import AnotherComponent from './AnotherComponent'
+import { Router, Route, IndexRoute } from 'react-router'
 
 render( <
-    Provider store = { store } >
+    Provider store = { ApplicationStore.store } >
     <
-    Counter / >
+    Router history = { ApplicationStore.history } >
+    <
+    Route path = "/"
+    component = { MainComponent } > < IndexRoute component = { Counter }
+    /><Route path="test" component={AnotherComponent} / > < /Route></Router >
     <
     /Provider>,
     document.getElementById("app")

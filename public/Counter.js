@@ -10,15 +10,16 @@ class App extends React.Component {
     clickInc() {
         this.props.testClick();
     }
-    
+
     render() {
-        
-        return (
-            <div>
-                <h1>Hello Redux</h1>
-                <h2>Counter: {this.props.counter }</h2>
-                <button onClick={this.clickInc.bind(this)}>Click Me</button>
-            </div>
+
+        return ( <
+            div >
+            <
+            h1 > Hello Redux < /h1> <
+            h2 > Counter: { this.props.global.counter } < /h2> <
+            button onClick = { this.clickInc.bind(this) } > Click Me < /button> <
+            /div>
         )
     }
 }
